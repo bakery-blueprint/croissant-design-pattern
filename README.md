@@ -1,6 +1,6 @@
 # Croissant Design Pattern 
 
-Season 4
+Season 4 - Test
 
 ![Croissant](doc/croissant-outline.png)
 
