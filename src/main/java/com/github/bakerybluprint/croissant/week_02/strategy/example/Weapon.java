@@ -1,4 +1,4 @@
-package com.github.bakerybluprint.croissant.week_02.example;
+package com.github.bakerybluprint.croissant.week_02.strategy.example;
 
 /**
  * Project : croissant
