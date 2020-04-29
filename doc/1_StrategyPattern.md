@@ -55,6 +55,8 @@ public static void main(String []) {
 }
 ```
 
+### UML
+<img width="740" alt="스크린샷 2020-04-30 오전 8 53 27" src="https://user-images.githubusercontent.com/38370976/80658198-76d13f00-8ac0-11ea-985f-6b0282119f04.png">
 
 
 ### 예제 코드
