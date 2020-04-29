@@ -160,7 +160,7 @@ public class AdapterImpl implements Adapter {
 - 알고리즘을 수행할 **템플릿 메소드**를 만든다.
 - 하위 클래스에서 **나눠진 메소드를 구현**한다.
 
-### 예제코드
+### 예제코드 확인
 
 ```java
 //Abstract class
