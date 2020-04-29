@@ -1,45 +1,61 @@
 # 1. Strategy Pattern
 ### 설명
-- 클라이언트 객체에서 서로 교환 가능한 다른 구현들을 의존성없이 변경 가능하도록 하는 패턴
-- 동일한 기능에 대한 선언을 가진 인터페이스를 다양한 클래스로 구현하고 각각의 구현들을 변경하면서 사용할 수 있도록 하는 패턴
+- 여러 알고리즘을 하나의 추상적인 접근점(인터페이스)을 만들어 접근점에서 서로 교환가능하도록 하는 패턴.
+- 동일한 기능에 대한 선언을 가진 인터페이스를 다양한 클래스로 구현하고 각각의 구현들을 변경하면서 사용할 수 있도록 함.
 ### 인터페이스
-- 객체에 대한 **선언과 기능을 분리**
+- 사전적의미 : 키보드나 디스플레이 따위처럼 사람과 컴퓨터를 연결하는 장치
+- 기능에 대한 **선언과 구현 분리** 
 - 기능 구현 시에 기능 **구현에 대한 통로**
 ```java
 //기능에 대한 선언
 interface AInterface {
   void functionA();
 } 
-```
-```java
+
 //선언 후 구체적인 구현이 어떤지 클래스를 통해서 만들 수 있다.
 class AImplements implements AInterface {
   public void functionA(){
     //구현
+    System.out.println("AAA");
   }
 }
 
 public static void main(String[] args) {
 	
   AInterface aInterface = new AImplements();
-  aInterface.functionA();
+  
+  // 통로
+  aInterface.functionA(); 
 }
 ```
 ### 델리게이트
 - 구현을 **위임하는 것**
-- A 클래스는 사실상 구현한 것이 없고 B 클래스의 구현을 동작을 하는 것
+- 특정 객체의 기능을 사용하기 위해 다른 객체의 기능을 호출하는것.
 ```java
-class A {
-    void functionA() {
-        B b = new B();
-        b.functionB();
+public class AObj {
+
+    AInterface aInterface;
+
+    public AObj(AInterface aInterface) {
+        this.aInterface = aInterface;
+    }
+
+    public void funcAA() {
+    	//위임 
+        aInterface.funcA();
+        aInterface.funcA();
     }
 }
 
-class B {
-    void functionB() { /*구현*/}
+
+//Main
+public static void main(String []) {
+  AObj aObj = new AObj(aInterface);
+  aObj.funcAA();
 }
 ```
+
+
 
 ### 예제 코드
 - 중심이 되는 캐릭터라는 객체
