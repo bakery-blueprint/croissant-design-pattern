@@ -12,9 +12,11 @@
 
 ## UML
 <img width="488" alt="스크린샷 2020-04-30 오전 11 59 07" src="https://user-images.githubusercontent.com/38370976/80667412-12bb7480-8ada-11ea-8357-285d3c8f7012.png">
+
 1. AbstractClass
 - 템플릿 메서드를 정의하는 클래스
 - 하위 클래스에 공통 알고리즘을 정의하고 하위 클래스에서 구현될 기능을 abstract 메서드로 정의하는 클래스
+
 2. ConcreteClass
 - 물려받은 abstract 메서드를 구현하는 클래스
 - 상위 클래스에 구현된 템플릿 메서드의 일반적인 알고리즘에서 하위 클래스에 적합하게 오버라이드하는 클래스
