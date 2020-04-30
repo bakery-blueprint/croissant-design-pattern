@@ -40,7 +40,7 @@ public abstract class AbstGameConnectHelper {
     }
 
     //권한 과정
-    String userName = "mesung";
+    String userName = "abcd";
     int i = authorization(userName);
     switch (i) {
       case 0: //게임 매니저
