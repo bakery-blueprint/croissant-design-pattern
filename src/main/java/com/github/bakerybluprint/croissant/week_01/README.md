@@ -3,7 +3,7 @@
 - 상품객체
 - 고객객체 (gubun 0: 임직원, 1: 일반고객)
 
-**주문서 진입가능한 상태인지 체크한다.**
+### 주문서 진입가능한 상태인지 체크한다.
 - 상품을 주문하기 위한 주문서 진입 전 주문가능한 상태인지 일련의 과정을 체크해야한다.
 - Method명 :orderSheetRequest(Customer customer, Product product) : Map<String, String>
 - return type : Map<String, String> 결과값으로  Status(E:주문가능, S:주문불가)와 Message를 리턴받는다. 
@@ -22,7 +22,7 @@
 - 임직원은 사은품이 있으면 주문 불가
 
 
-**주문서 주문가능한 상태일 경우 결제한다.**
+### 주문서 주문가능한 상태일 경우 결제한다.
 - Method : pay(long prc)
 - return type : void
 1. 결제수단은 카카오페이, 신용카드, 현금결제, 포인트사용 중 가능하다.
