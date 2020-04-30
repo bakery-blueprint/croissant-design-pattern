@@ -1,11 +1,13 @@
 # 1. Strategy Pattern
+
 ### 설명
-- 여러 알고리즘을 하나의 추상적인 접근점(인터페이스)을 만들어 접근점에서 서로 교환가능하도록 하는 패턴.
+- 여러 알고리즘을 하나의 **추상적인 접근점(인터페이스)** 을 만들어 접근점에서 **서로 교환가능**하도록 하는 패턴.
 - 동일한 기능에 대한 선언을 가진 인터페이스를 다양한 클래스로 구현하고 각각의 구현들을 변경하면서 사용할 수 있도록 함.
+
 ### 인터페이스
-- 사전적의미 : 키보드나 디스플레이 따위처럼 사람과 컴퓨터를 연결하는 장치
 - 기능에 대한 **선언과 구현 분리** 
 - 기능 구현 시에 기능 **구현에 대한 통로**
+- 유연한 프로그램은 객체간의 의존성을 줄이기 위해서 인터페이스를 사용하며 서로 대화를 나눌 때에 인터페이스를 사용
 ```java
 //기능에 대한 선언
 interface AInterface {
@@ -28,6 +30,7 @@ public static void main(String[] args) {
   aInterface.functionA(); 
 }
 ```
+
 ### 델리게이트
 - 구현을 **위임하는 것**
 - 특정 객체의 기능을 사용하기 위해 다른 객체의 기능을 호출하는것.
@@ -56,33 +59,40 @@ public static void main(String []) {
 ```
 
 ### UML
-<img width="740" alt="스크린샷 2020-04-30 오전 8 53 27" src="https://user-images.githubusercontent.com/38370976/80658198-76d13f00-8ac0-11ea-985f-6b0282119f04.png">
+<img width="553" alt="스크린샷 2020-04-30 오전 9 04 01" src="https://user-images.githubusercontent.com/38370976/80658689-c3694a00-8ac1-11ea-97ea-4c5f29b7bf99.png">
+전략을 사용하는 Client 에서 StrategyA, StrategyB, StrategyC를 사용할 수 있음 
 
 
 ### 예제 코드
 - 중심이 되는 캐릭터라는 객체
-- 캐릭터는 무기를 소지
+- 캐릭터는 무기(접슨점)를 소지
+- 무기에는 칼, 검 두가지가 있음
 - 무기에는 공격이라는 기능이 있고 기 기능은 추상화 되어 있고 하위 객체에서 구현
 
 ```java
 
 //GameCharacter.java
 public class GameCharacter {
-
+    //접근점
     private Weapon weapon;
 
-    public int attact() {
-        return weapon.doAttact();
+    public void attact() {
+    	if (weapon == null) {
+			System.out.println("맨손공격");
+		} else {
+			weapon.doAttact();  // 델리게이트
+		}
     }
 
+    //교환가능
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 }
 
 //Weapon.java
-public interface Weapon {
-    public int doAttact();
+public interface Weapon {	//접근점
+    public int doAttact();	//기능
 }
 
 
@@ -109,7 +119,8 @@ public class Main {
     public static void main(String[] args) {
 		
         GameCharacter character = new GameCharacter();
-		
+	
+	// 교환하여 사용
         character.setWeapon(new Sword());
 	character.attact();
 		
@@ -122,6 +133,8 @@ public class Main {
 }
 
 ```
+
+
 
 
 
