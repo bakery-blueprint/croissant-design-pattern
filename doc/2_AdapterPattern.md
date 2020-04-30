@@ -14,7 +14,7 @@
 - 두수에 대한 다음 연산을 수행하는 객체를 만들어라
  수의 두배의 수를 반환 : twiceOf(Float) : Float
  수의 반(1/2)을 반환 :  halfOf(Float) : Float
-- 구현 객체의 기능은 'Adapter'
+- 구현 객체의 이름은 'Adapter'
 - Math 클래스에서 두 배와 절반을 구하는 함수는 이미 구현되어 있음
 
 ```java
