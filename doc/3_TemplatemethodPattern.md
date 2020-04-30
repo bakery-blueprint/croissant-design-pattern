@@ -174,3 +174,6 @@ public class DefaultGameConnectHelper extends AbstGameConnectHelper{
 }
 
 ```
+
+## 장점
+- 전체적인 알고리즘은 상위 클래스에서 구현하면서 다른 부분은 하위 클래스에서 구현할 수 있도록 함으로써 전체적인 알고리즘 코드를 재사용하는 데 유용함.
