@@ -15,7 +15,7 @@
 - 일반고객과 임직원고객에 대해 주문가능 상태 체크 알고리즘이 다르다
 - 일반고객일 경우 블랙컨슈머 여부를 체크하며 블랙컨슈머이면 주문 불가
 - 임직원은 보유 포인트 여부를 체크하며 보유 포인트가 0원일 경우 주문 불가
-3. 상품에 대한 재고를 체크한다.  checkProduct() : boolean
+3. 상품에 대한 재고를 체크한다.  checkProduct(Product product) : boolean
 - 재고가 없으면 주문 불가 
 4. 사은품에 대한 재고를 체크한다. checkGift(String giftNo) : boolean
 - 일반 고객은 사은품 재고를 체크하여 사은품 재고가 없으면 주문 불가
@@ -36,11 +36,13 @@ public class Product {
     public long prdCd;      // 상품코드
     public long prdPrc;     // 상품가격
     public long giftNo;     // 사은품 코드 - 0 일 경우 사은품 없음!
+    public int stock;       // 재고
 
-    public Product(long prdCd, long prdPrc, long giftNo) {
+    public Product(long prdCd, long prdPrc, long giftNo, int stock) {
         this.prdCd = prdCd;
         this.prdPrc = prdPrc;
         this.giftNo = giftNo;
+	this.stock = stock;
     }
 }
 ```
@@ -77,8 +79,9 @@ public class shopMain {
         //Customer customer = new Customer("mike6321", "jw", 1, 2000, false);     //준우 일반고객
         //Customer customer = new Customer("leetsh", "sh", 2, 0, true);      	  //상현 일반고객 블랙컨슈머
 	
-	Product product1 = new Product(111111, 20000, 12345);	// 상품코드, 가격, 사은품코드
-	Product product2 = new Product(222222, 10000, 0);	// 상품코드, 가격, 
+	Product product1 = new Product(111111, 20000, 12345, 10);	// 상품코드, 가격, 사은품코드, 재고
+	Product product2 = new Product(222222, 10000, 0, 40);	
+	Product product2 = new Product(222222, 10000, 0, 0);	
     }
 }
 ```
