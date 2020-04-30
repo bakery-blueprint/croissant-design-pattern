@@ -43,8 +43,9 @@ public class Product {
         this.giftNo = giftNo;
     }
 }
-'''
-- 고객객체 (gubun 0: 임직원, 1: 일반고객)
+```
+
+- 고객객체
 
 ```java
 public class Customer {
@@ -65,7 +66,8 @@ public class Customer {
 }
 ```
 
-
+- 
+```java
 public class shopMain {
 
     public static void main(String [] args) {
@@ -79,6 +81,7 @@ public class shopMain {
 	Product product2 = new Product(222222, 10000, 0);	// 상품코드, 가격, 
     }
 }
+```
 
 
 
