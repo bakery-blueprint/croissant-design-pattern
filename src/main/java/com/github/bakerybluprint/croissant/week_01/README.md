@@ -30,7 +30,7 @@ public class Customer {
 
     public String userId;
     public String userName;
-    public int gubun;			// 0: 임직원, 1: 일반고객, 2: 블
+    public int gubun;			// 0: 임직원, 1: 일반고객, 2: 블랙컨슈머
     public long point;
 
     public Customer(String userId, String userName, int gubun, long point) {
@@ -48,7 +48,7 @@ public class shopMain {
 
         Customer customer = new Customer("dynee313", "dy", 0, 0);    //도연 임직원
         //Customer customer = new Customer("imesung", "hs", 0, 10000);     //혜성 임직원
-        //Customer customer = new Customer("mike6321", "jw", 1, 5000);    //준우 일반고객
+        //Customer customer = new Customer("mike6321", "jw", 1, 2000);    //준우 일반고객
         //Customer customer = new Customer("leetsh", "sh", 2, 0);      //상현 블랙컨슈머
     }
 }
