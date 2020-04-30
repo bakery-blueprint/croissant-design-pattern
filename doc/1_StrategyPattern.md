@@ -33,7 +33,7 @@ public static void main(String[] args) {
 
 ### 델리게이트
 - 구현을 **위임하는 것**
-- 특정 객체의 기능을 사용하기 위해 다른 객체의 기능을 호출하는것.
+- 특정 객체의 기능을 사용하기 위해 다른 객체의 기능을 호출하는것으로 AObj는 functionA를 호출함으로서 AObj는 AInterface를 구현한 구현클래스에 구현을 위임
 ```java
 public class AObj {
 
@@ -140,6 +140,10 @@ public class Main {
 
 ```
 
+## 장점
+- 객체의 실시간 알고리즘의 변경시에 유용하다.
+- Strategy Interface를 구현해서 신규 알고리즘을 추가하기가 용이하다. 
+- 추후에 알고리즘이 변경시에도 클라이언트와 독립적으로 해당 알고리즘만 변경되면 된다.
 
 
 
