@@ -78,10 +78,10 @@ public class GameCharacter {
 
     public void attact() {
     	if (weapon == null) {
-			System.out.println("맨손공격");
-		} else {
-			weapon.doAttact();  // 델리게이트
-		}
+		System.out.println("맨손공격");
+	} else {
+		weapon.doAttact();  // 델리게이트
+	}
     }
 
     //교환가능
