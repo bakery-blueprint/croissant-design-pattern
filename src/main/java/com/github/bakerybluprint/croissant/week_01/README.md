@@ -23,7 +23,7 @@ public class Customer {
 
     public String userId;
     public String userName;
-    public int gubun;
+    public int gubun;			// 0: 임직원, 1: 일반고객, 2: 블
     public long point;
 
     public Customer(String userId, String userName, int gubun, long point) {
