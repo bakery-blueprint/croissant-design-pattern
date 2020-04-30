@@ -16,6 +16,7 @@
 
 ## 예제코드 확인
 <img width="564" alt="스크린샷 2020-04-30 오후 12 02 09" src="https://user-images.githubusercontent.com/38370976/80667604-96756100-8ada-11ea-97ad-8a73a7badba1.png">
+- 보안, 인증, 권한, 접속 => 구현하려는 알고리즘이 일정한 프로세스가 있음
 
 ```java
 //Abstract class
