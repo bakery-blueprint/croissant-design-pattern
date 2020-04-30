@@ -9,11 +9,11 @@
 과정
 1. 주문서에 진입 시 로그인 상태인지 체크한다. checkLoginStatus() : boolean
 2. 고객이 주문가능한 상태인지 체크한다. 고객은 일반고객, 임직원고객으로 나뉜다. checkCustomerStatus(Customer customer) : boolean
-	일반고객은 다시  일반고객, 블랙컨슈머 고객으로 나뉨, 블랙컨슈머 고객은 구매불가능함.
-	임직원 고객은 보유 포인트가 0원 이상이여야 구매가능함.
-   3. 상품에 대한 재고를 체크한다.  checkProduct(String prdNo) : boolean
-   4. 사은품에 대한 재고를 체크한다. checkGift(String giftNo) : boolean
-	이때 임직원은 사은품이 있으면 구매불가능하다.
+- 일반고객은 다시  일반고객, 블랙컨슈머 고객으로 나뉨, 블랙컨슈머 고객은 구매불가능함.
+- 임직원 고객은 보유 포인트가 0원 이상이여야 구매가능함.
+3. 상품에 대한 재고를 체크한다.  checkProduct(String prdNo) : boolean
+4. 사은품에 대한 재고를 체크한다. checkGift(String giftNo) : boolean
+- 이때 임직원은 사은품이 있으면 구매불가능하다.
 
 *주의사항
 일반고객과 임직원고객에 대해 주문가능 상태 체크, 사은품 재고체크 알고리즘이 다름
