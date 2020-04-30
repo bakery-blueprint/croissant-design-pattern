@@ -61,11 +61,11 @@ public static void main(String []) {
 ### UML
 <img width="553" alt="스크린샷 2020-04-30 오전 9 04 01" src="https://user-images.githubusercontent.com/38370976/80658689-c3694a00-8ac1-11ea-97ea-4c5f29b7bf99.png">
 
-Strategy
+- Strategy
 인터페이스나 추상 클래스로 외부에서 동일한 방식으로 알고리즘을 호출하는 방법을 명시
-StrategyA, StrategyB, StrategyC
+- StrategyA, StrategyB, StrategyC
 스트래티지 패턴에서 명시한 알고리즘을 실제로 구현한 클래스
-Client
+- Client
 스트래티지 패턴을 이용하는 역할을 수행한다.
 필요에 따라 동적으로 구체적인 전략을 바꿀 수 있도록 메서드 제공
 
