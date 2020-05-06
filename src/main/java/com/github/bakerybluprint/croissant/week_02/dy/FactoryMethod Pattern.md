@@ -76,7 +76,7 @@ public class MpPotion implements Item {
     }
 }
 
-public class ㅡpCreator extends ItemCreator {
+public class MpCreator extends ItemCreator {
     @Override
     protected void requestItemInfo() {
         System.out.println("데이터 베이스에서 마력 회복 물약의 정보조회.");
