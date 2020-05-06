@@ -54,12 +54,37 @@ public class HpPotion implements Item {
 public class HpCreator extends ItemCreator {
     @Override
     protected void requestItemInfo() {
-        System.out.println("데이터 베이스에서 체력 회복 물약의 터정보를 가져옵니다.");
+        System.out.println("데이터 베이스에서 체력 회복 물약의 정보 조회.");
     }
 
     @Override
     protected void createItemLog() {
-        System.out.println("체력 회복 물약을 새로 생성 했습니다."+new Date());
+        System.out.println("체력 회복 물약을 생성 "+new Date());
+    }
+
+    @Override
+    protected Item createItem() {
+
+        return new HpPotion();
+    }
+}
+
+public class MpPotion implements Item {
+    @Override
+    public void use() {
+        System.out.println("마력 회복");
+    }
+}
+
+public class ㅡpCreator extends ItemCreator {
+    @Override
+    protected void requestItemInfo() {
+        System.out.println("데이터 베이스에서 마력 회복 물약의 정보조회.");
+    }
+
+    @Override
+    protected void createItemLog() {
+        System.out.println("마력 회복 물약을 생성."+new Date());
     }
 
     @Override
