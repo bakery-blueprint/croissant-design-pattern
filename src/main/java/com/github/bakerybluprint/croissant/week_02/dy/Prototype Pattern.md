@@ -7,7 +7,7 @@
 	- 클래스로부터 인스턴스 생성이 어려운 경우
 
 ### UML
-<img width="412" alt="스크린샷 2020-05-06 오후 10 27 54" src="https://user-images.githubusercontent.com/38370976/81227488-7a684700-9027-11ea-9fbf-96b427076f40.png">
+<img width="406" alt="스크린샷 2020-05-07 오전 5 55 56" src="https://user-images.githubusercontent.com/38370976/81228515-265e6200-9029-11ea-900c-671801f6fe96.png">
 
 ### 예제
 
