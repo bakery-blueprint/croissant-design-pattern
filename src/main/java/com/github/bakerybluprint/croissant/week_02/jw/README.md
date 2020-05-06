@@ -118,6 +118,59 @@ public enum  SystemSpeaker {
 
 ------
 
+다시 한번 생각해보면 왜 이렇게 리플렉션 방어에 치중하는 것일까?
+
+목적은 인스턴스를 안전하게 하나만 생성하는 것일텐대 말이다.
+
+리플렉션이 private 생성자를 뚫을지언정 또 다른 여러가지 방어적인 코딩으로 제어할 수 있다.
+
+
+
+예를 들자명 아래와 같은 방식으로 가능하다.
+
+````java
+private Singleton() {
+  if (true)
+    throw  new UnsupportedOperationException();
+}
+````
+
+
+
+### Version 04 가장 많이 쓰이는 LazyHolder 방식 (Lazy Initialization)
+
+그렇다면 가장 많이 쓰이는 방식은 아래와 같은 방식이다.
+
+```java
+public class Singleton {
+    private Singleton() {
+
+    }
+
+    public static Singleton getInstance() {
+        return LazyHolder.INSTANCE;
+    }
+
+    private static class LazyHolder {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+}
+```
+
+
+
+이 방식은 클래스 내부에 static 내부 클래스를 두어서 클래스 로딩 시점에 JVM에게 인스턴스 생성을 맡겨 버리는 방법이다.
+
+
+
+해당 방법은 클래스 초기화 시점에는 Thread-Safe를 보장하기 때문에  굳이 volatile 이나 synchronized 키워드를 사용하지 않아도되며
+
+성능까지 보장하는 가장 널리 사용되는 싱글턴 방식이다.
+
+[https://medium.com/@joongwon/multi-thread-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-%EC%98%AC%EB%B0%94%EB%A5%B8-singleton-578d9511fd42](https://medium.com/@joongwon/multi-thread-환경에서의-올바른-singleton-578d9511fd42)
+
+------
+
 # FactoryMethod Pattern
 
 
