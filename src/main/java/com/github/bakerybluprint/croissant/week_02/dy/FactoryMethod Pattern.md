@@ -1,11 +1,14 @@
 # Factory Method Pattern
 
-## 학습목표
+### 학습목표
 > - 팩토리 메소드 패턴에서 템플릿 메소드 패턴이 사용됨을 안다.
 > - 팩토리 메소드 패턴에서 구조와 구현의 분리를 이해하고 구조와 구현의 분리의 장단점을 안다.
 
+### 팩토리 메소드 페턴이란?
+- 객체 생성 처리를 서브 클래스로 분리 해 처리하도록 캡슐화하는 패턴
+  - 즉, 객체의 생성 코드를 별도의 클래스/메서드로 분리함으로써 객체 생성의 변화에 대비하는 데 유용하다
 
-## UML
+### UML
 <img width="412" alt="스크린샷 2020-05-06 오후 10 27 54" src="https://user-images.githubusercontent.com/38370976/81182628-027b2c00-8fe9-11ea-8245-df6723a8514e.png">
 
 1. Product : 팩토리 메서드로 생성될 객체의 공통 인터페이스
@@ -24,14 +27,17 @@
 
 
 ```java
+//팩토리 메서드로 생성될 객체의 공통 인터페이스
 public interface Item {
     public void use();
 }
 ```
 
 ```java
+//팩토리 메서드를 갖는 클래스
 public abstract class ItemCreator {
 
+    // 템플릿 메소드 페턴
     public Item create() {
         Item item;
         
@@ -53,6 +59,7 @@ public abstract class ItemCreator {
 ```
 
 ```java
+//구체적으로 객체가 생성되는 클래스
 public class HpPotion implements Item {
     @Override
     public void use() {
@@ -60,6 +67,7 @@ public class HpPotion implements Item {
     }
 }
 
+//팩토리 메서드를 구현하는 클래스
 public class HpCreator extends ItemCreator {
     @Override
     protected void requestItemInfo() {
@@ -71,6 +79,7 @@ public class HpCreator extends ItemCreator {
         System.out.println("체력 회복 물약을 생성 "+new Date());
     }
 
+    // 객체를 하위클래스에서 생성
     @Override
     protected Item createItem() {
         return new HpPotion();
