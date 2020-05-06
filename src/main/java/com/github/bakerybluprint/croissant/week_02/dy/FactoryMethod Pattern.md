@@ -64,7 +64,6 @@ public class HpCreator extends ItemCreator {
 
     @Override
     protected Item createItem() {
-
         return new HpPotion();
     }
 }
@@ -89,8 +88,7 @@ public class MpCreator extends ItemCreator {
 
     @Override
     protected Item createItem() {
-
-        return new HpPotion();
+        return new MpPotion();
     }
 }
 ```
