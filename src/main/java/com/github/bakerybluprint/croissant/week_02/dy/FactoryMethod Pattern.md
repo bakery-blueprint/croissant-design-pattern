@@ -6,14 +6,10 @@
 
 <img width="412" alt="스크린샷 2020-05-06 오후 10 27 54" src="https://user-images.githubusercontent.com/38370976/81182628-027b2c00-8fe9-11ea-8245-df6723a8514e.png">
 
-1. Product
-- 팩토리 메서드로 생성될 객체의 공통 인터페이스
-2. DefultProduct
-- 구체적으로 객체가 생성되는 클래스
-3. Creator
-- 팩토리 메서드를 갖는 클래스
-4.  DefultProductCreator
-- 팩토리 메서드를 구현하는 클래스로 DefultProductCreator 객체를 생성
+1. Product : 팩토리 메서드로 생성될 객체의 공통 인터페이스
+2. DefultProduct : 구체적으로 객체가 생성되는 클래스
+3. Creator : 팩토리 메서드를 갖는 클래스
+4. DefultProductCreator : 팩토리 메서드를 구현하는 클래스로 DefultProductCreator 객체를 생성
 
 요구 사항
 - 게임 아이템과 아이템 생성을 구현해라.
