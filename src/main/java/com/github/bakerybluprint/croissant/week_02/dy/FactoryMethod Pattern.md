@@ -6,13 +6,13 @@
 
 
 
-```java~
+```java
 public interface Item {
     public void use();
 }
 ```
 
-```java~
+```java
 public abstract class ItemCreator {
 
     public Item create() {
@@ -35,7 +35,7 @@ public abstract class ItemCreator {
 }
 ```
 
-```java~
+```java
 public class HpPotion implements Item {
     @Override
     public void use() {
@@ -62,7 +62,7 @@ public class HpCreator extends ItemCreator {
 }
 ```
 
-```java~
+```java
 public class Main {
     public static void main(String[] args) {
         Item item;
