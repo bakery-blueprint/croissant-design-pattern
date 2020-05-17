@@ -64,6 +64,8 @@ public class Computer {
 ```
 
 ```java
+
+// Builder 역할
 public abstract class BluePrint {
     abstract public void setCpu();
     abstract public void setRam();
@@ -72,6 +74,7 @@ public abstract class BluePrint {
     public abstract Computer getComputer();
 }
 
+//상속
 public class LgGramBluePrint extends BluePrint {
 
     private Computer computer;
@@ -102,6 +105,7 @@ public class LgGramBluePrint extends BluePrint {
 ```
 
 ```java
+//Director 역할!
 public class ComputerFactory {
 
     private BluePrint bluePrint;
@@ -139,8 +143,6 @@ public class Main {
         factory.make();
         Computer computer = factory.getComputer();
         System.out.println(computer.toString());
-
-
     }
 }
 ```
