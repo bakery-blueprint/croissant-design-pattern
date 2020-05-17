@@ -147,6 +147,63 @@ public class Main {
 }
 ```
 
+## 빌더패턴 2
+- 많은 변수를 가진 객체의 생성을 가독성 높도록 코딩할 수 있다.
+- 많은 인자를 가진 객체 생성을 다른 객체의 도움으로 생성하는 패턴.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        //  cpu, ram, storagem 순서인데 인자 순서를 잘못 넣을 수 있음!
+        // Computer computer = new Computer("256 ssd", "i7", "8g");
+
+        // 인자가 많은 경우 실수를 줄이기 위해  체이닝
+        // 가독성이 높아짐!
+        Computer computer = ComputerBuilder
+                .start()
+                .setCpu("i7")
+                .setRam("8g")
+                .setStorage("256 ssd")
+                .build();
+
+        System.out.print(computer.toString());
+    }
+}
+
+public class ComputerBuilder {
+
+    private Computer computer;
+
+    private ComputerBuilder() {
+        computer = new Computer("default", "default", "default");
+    }
+
+    public static ComputerBuilder start() {
+        return new ComputerBuilder();
+    }
+
+    public ComputerBuilder setCpu(String cpu) {
+        computer.setCpu(cpu);
+        return this;
+    }
+
+    public ComputerBuilder setRam(String ram) {
+        computer.setRam(ram);
+        return this;
+    }
+
+    public ComputerBuilder setStorage(String storage) {
+        computer.setStorage(storage);
+        return this;
+    }
+
+    public Computer build() {
+        return this.computer;
+    }
+}
+```
 
 
 
