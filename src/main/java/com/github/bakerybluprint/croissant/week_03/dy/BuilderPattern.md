@@ -5,7 +5,7 @@
 - 복잡한 단계를 거쳐야 생성되는 객체의 구현을 서브 클래스에게 넘겨주는 패턴
 
 ### UML
-https://user-images.githubusercontent.com/38370976/82143413-c95f7900-987e-11ea-8c73-d7f8ab0376e6.png
+![KakaoTalk_Photo_2020-05-17-20-39-24](https://user-images.githubusercontent.com/38370976/82143413-c95f7900-987e-11ea-8c73-d7f8ab0376e6.png)
 - Director 가 Builder를 가지고 build 하는 패턴.
 
 
