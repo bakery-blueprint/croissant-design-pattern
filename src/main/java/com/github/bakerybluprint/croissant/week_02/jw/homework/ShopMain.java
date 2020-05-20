@@ -1,10 +1,9 @@
 package com.github.bakerybluprint.croissant.week_02.jw.homework;
 
 
-import com.github.bakerybluprint.croissant.week_02.jw.homework.Order.OrderCheck;
+import com.github.bakerybluprint.croissant.week_02.jw.homework.Order.*;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Customer.Customer;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Login.LoginCheck;
-import com.github.bakerybluprint.croissant.week_02.jw.homework.Order.EmployeeCustomerOrderCheck;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Payment.Kakaopay;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Payment.Payment;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Product.Product;
@@ -27,7 +26,9 @@ public class ShopMain {
     public static void main(String[] args) {
 
         String userId = "mike6321";
-        Customer customer = new Customer(userId);
+        ShopMain.sessionId = userId;
+
+        Customer customer = Customer.getInstance();
         boolean checkCustomer = customer.checkCustomer(customer);
 
         LoginCheck.checkLogin(userId, checkCustomer);
@@ -35,8 +36,11 @@ public class ShopMain {
 
         // TODO: [주문가능한 상태인지를 체크 블랙컨슈머 / 일반고객 ] junwoochoi 2020/05/06 8:48 오후
         // 팩토리 메서드 구현 예정
-        OrderCheck orderCheck = new EmployeeCustomerOrderCheck();
-        orderCheck.checkOrder(userId);
+        //OrderCheck orderCheck = new EmployeeCustomerOrderCheck();
+        //CustomerOrderCheck customerOrderCheck = new EmployeeCustomerOrderCheckCreator();
+
+        OrderCheckCreator orderCheckCreator = new EmployeeCustomerOrderCheckCreator();
+
 
 
         // TODO: [상품에 대한 재고 체크] junwoochoi 2020/05/06 9:08 오후

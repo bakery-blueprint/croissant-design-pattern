@@ -27,9 +27,10 @@ public class LoginCheck {
     public static void checkLogin(String userId, boolean checkCustomer) {
         if (checkCustomer) {
             LOGGER.info(userId + " 님  환영합니다!");
-            ShopMain.sessionId = userId;
         } else {
             LOGGER.info("회원이 아니십니다!");
+            ShopMain.sessionId = "";
+            LOGGER.info("expire session Id");
         }
     }
 }

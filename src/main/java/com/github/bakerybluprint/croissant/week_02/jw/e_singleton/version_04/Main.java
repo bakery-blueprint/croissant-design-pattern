@@ -16,15 +16,28 @@ public class Main {
         SystemSpeaker instance1 = SystemSpeaker.getInstance();
         SystemSpeaker instance2 = SystemSpeaker.getInstance();
 
+        System.out.println(instance1 == instance2);
 
 
+        /************************리플렉션구현************************/
         Class<SystemSpeaker> systemSpeakerClass = SystemSpeaker.class;
         Constructor<SystemSpeaker> declaredConstructor = systemSpeakerClass.getDeclaredConstructor();
+
         declaredConstructor.setAccessible(true);
-        SystemSpeaker instance3 = declaredConstructor.newInstance();
+
+        SystemSpeaker systemSpeaker = declaredConstructor.newInstance();
+        /**********************리플렉션구현************************/
 
         System.out.println(instance1);
         System.out.println(instance2);
-        System.out.println(instance3);
+
+        System.out.println(systemSpeaker);
+
+
+
+
+
+
+
     }
 }

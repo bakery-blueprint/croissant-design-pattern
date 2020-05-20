@@ -1,20 +1,20 @@
 package com.github.bakerybluprint.croissant.week_02.jw.homework.Order;
 
-
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Login.LoginCheck;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.ShopMain;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Project : EffectiveStudy
- * Created by InteliJ IDE
- * Developer : junwoochoi
- * Date : 2020/05/03
- * Time : 1:06 오전
+ * Project : croissant
+ *
+ * @author : jwdeveloper
+ * @comment :
+ * Time : 1:20 오전
  */
-public abstract class OrderCheck {
-    private static final Logger LOGGER = LoggerFactory.getLogger(OrderCheck.class);
+public abstract class OrderCheckCreator {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(OrderCheckCreator.class);
     protected abstract boolean authorizationCheck(String userId);
 
 
@@ -36,4 +36,6 @@ public abstract class OrderCheck {
     private boolean checkLoginStatus() {
         return LoginCheck.loginState;
     }
+
+    abstract protected CustomerOrderCheck createOrderCheck();
 }
