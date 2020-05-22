@@ -17,7 +17,7 @@
 	* 전부를 복사하여 새 주소에 담기 때문에 참조를 공유하지 않음
 ***
 ####실습 7-1.
-<pre><code>
+```java
 Cat navi = new Cat();    //Cat 객체1 생성
 navi.setName("navi");
 
@@ -26,8 +26,7 @@ yo.setName("yo");
 
 System.out.println(navi.getName()); // yo 출력
 System.out.println(yo.getName());   // yo 출력
-</code></pre>
-
+```
 Q. 왜 navi 와 yo 의 name이 동일하게 "yo"로 출력?
 A. 디버깅 결과 navi와 yo의 주소값이 동일. 즉, navi가 가지고 있는 주소값을 yo가 그대로 가져감. 이것이 낮은 수준의 복사라고 함.
 
@@ -36,7 +35,7 @@ A. 디버깅 결과 navi와 yo의 주소값이 동일. 즉, navi가 가지고 �
 navi의 주소값을 복사하는 것이 아닌 navi가 갖고 있는 값(프로퍼티)들을 복사해 주는 것!
 ***
 Prototype Pattern 1에서 Clone 메소드를 통하여 객체를 복사하는 방법을 배웠음
-<pre><code>
+```java
 @Data
 public class Cat implements Cloneable {
     private String name;
@@ -48,9 +47,9 @@ public class Cat implements Cloneable {
 
 //main
 Cat you = navi.copy();    //copy 메소드를 사용하여 깊은복사!
-</code></pre>
+```
 ***
-<pre><code>
+```java
 @Datapublic class Age {    
     private Integer year;    
     private Integer value;
@@ -61,7 +60,7 @@ yo.getAge().setYear(2013);
 yo.getAge().setValue(2);
 System.out.println(navi.getAge().getYear());    //2013
 System.out.println(yo.getAge().getYear());      //2013
-</code></pre>
+```
 
 Q. navi와 yo의 name은 깊은 복사가 됐는데, age는 깊은 복사가 되지 않음!  
 A. 자바에서 제공하는 String, Integer와 같은 클래스들은 자동으로 깊은 복사가 되도록 주소값을 변경시켜줌. (native 소스)
@@ -69,16 +68,16 @@ A. 자바에서 제공하는 String, Integer와 같은 클래스들은 자동으
 Q. age 도 깊은 복사가 되도록 하려면?
 A. Cat 클래스의 copy 메소드에서 age를 명시적으로 깊은 복사가 되도록 작성!
 
-<pre><code>
+```java
 public Cat copy() throws CloneNotSupportedException {
     Cat cat = (Cat) this.clone();
     cat.setAge(new Age(this.age.getYear(), this.age.getValue()));
     return cat;
 }
-</code></pre>
+```
 ***
 #####깊은 복사 예제
-<pre><code>
+```java
     //RestTemplate의 config 설정 시 사용되는 RequestConfig의 copy 메소드
     @SuppressWarnings("deprecation")
     public static RequestConfig.Builder copy(final RequestConfig config) {
@@ -102,7 +101,7 @@ public Cat copy() throws CloneNotSupportedException {
             .setDecompressionEnabled(config.isDecompressionEnabled())
             .setContentCompressionEnabled(config.isContentCompressionEnabled());
     }
-</code></pre>
+```
 copy()하는 경우, 복사하려는 객체를 파라미터로 받고,  
 생성자를 이용하여 같은 데이터를 가진 새로운 객체를 리턴(new)
 ***
@@ -121,9 +120,6 @@ copy()하는 경우, 복사하려는 객체를 파라미터로 받고,
 
 * Builder Pattern  
 복잡한 단계를 거쳐야 생성되는 객체의 구현을 서브 클래스에게 넘겨주는 패턴
-
-* 기본 설계  
-ㅋㅋㅋㅋ
 
 ***
 
