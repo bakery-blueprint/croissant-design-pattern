@@ -1,6 +1,5 @@
 package com.github.bakerybluprint.croissant.week_03.dy.homework.Customer;
 
-import com.github.bakerybluprint.croissant.week_02.dy.homework.Pay.Payment;
 
 public abstract class Customer {
 

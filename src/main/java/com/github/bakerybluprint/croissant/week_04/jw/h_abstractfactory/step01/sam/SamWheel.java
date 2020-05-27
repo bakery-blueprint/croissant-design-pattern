@@ -1,6 +1,7 @@
 package com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.sam;
 
-import me.designpattern.h_abstractfactory.step01.abst.Wheel;
+
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.abst.Wheel;
 
 /**
  * Project : EffectiveStudy

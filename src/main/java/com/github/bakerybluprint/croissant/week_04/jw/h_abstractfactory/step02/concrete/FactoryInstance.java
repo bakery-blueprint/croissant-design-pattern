@@ -1,8 +1,9 @@
 package com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step02.concrete;
 
-import me.designpattern.h_abstractfactory.step02.abst.Button;
-import me.designpattern.h_abstractfactory.step02.abst.GuiFactory;
-import me.designpattern.h_abstractfactory.step02.abst.TextArea;
+
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step02.abst.Button;
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step02.abst.GuiFactory;
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step02.abst.TextArea;
 
 /**
  * Project : EffectiveStudy

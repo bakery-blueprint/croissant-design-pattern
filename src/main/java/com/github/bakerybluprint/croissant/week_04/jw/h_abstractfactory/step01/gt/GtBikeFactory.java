@@ -1,8 +1,9 @@
 package com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.gt;
 
-import me.designpattern.h_abstractfactory.step01.abst.BikeFactory;
-import me.designpattern.h_abstractfactory.step01.abst.Body;
-import me.designpattern.h_abstractfactory.step01.abst.Wheel;
+
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.abst.BikeFactory;
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.abst.Body;
+import com.github.bakerybluprint.croissant.week_04.jw.h_abstractfactory.step01.abst.Wheel;
 
 /**
  * Project : EffectiveStudy

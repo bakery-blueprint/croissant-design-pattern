@@ -45,6 +45,40 @@ public class Product {
         this.stock = stock;
     }
 
+    public static class Builder {
+        private  Integer prdCd;
+        private  Long prdPrc;
+        private  Long giftNo;
+        private  Integer stock;
+
+        public Builder prdCd(Integer val1) {
+            prdCd = val1;
+            return this;
+        }
+        public Builder prdPrc(Long val2) {
+            prdPrc = val2;
+            return this;
+        }
+        public Builder giftNo(Long val3) {
+            giftNo = val3;
+            return this;
+        }
+        public Builder stock(Integer val4) {
+            stock = val4;
+            return this;
+        }
+
+        public Product builder() {
+            return new Product(this);
+        }
+    }
+
+    public Product(Builder builder) {
+        builder.prdCd = prdCd;
+        builder.giftNo = giftNo;
+        builder.prdPrc = prdPrc;
+        builder.stock = stock;
+    }
 
     public static void ProductInfo() {
         for (Integer key : Product.product.keySet()) {
