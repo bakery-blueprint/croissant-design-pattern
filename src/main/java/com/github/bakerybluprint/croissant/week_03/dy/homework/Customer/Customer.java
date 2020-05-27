@@ -1,7 +1,5 @@
 package com.github.bakerybluprint.croissant.week_03.dy.homework.Customer;
 
-import com.github.bakerybluprint.croissant.week_03.dy.homework.Pay.Payment;
-
 public abstract class Customer {
 
     public String userId;       //ID

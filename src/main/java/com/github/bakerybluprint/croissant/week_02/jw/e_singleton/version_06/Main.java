@@ -1,4 +1,4 @@
-package com.github.bakerybluprint.croissant.week_02.jw.e_singleton.version02;
+package com.github.bakerybluprint.croissant.week_02.jw.e_singleton.version_06;
 
 /**
  * Project : EffectiveStudy

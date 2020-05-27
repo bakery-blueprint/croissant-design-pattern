@@ -2,7 +2,25 @@
 
 ------
 
+### Warming Up
+
+전략패턴의 Inteface는 필수적인가?
+
 # Singleton Pattern
+
+객체와 인스턴스
+
+[https://whatisthenext.tistory.com/m/36](https://whatisthenext.tistory.com/m/36)
+
+<u>객체지향과 사실과 오해 (조영호 지음)</u> 
+
+
+
+객체지향의 5대 원칙
+
+https://gmlwjd9405.github.io/2018/07/05/oop-solid.html
+
+객체의 기본요소 : 책임, 행동, 상태
 
 
 
@@ -19,11 +37,13 @@
 
 **단점** 
 
-- 싱글턴 인스턴스가 너무 많은 일을 하면 인스턴스의 간의 결합도가 높아진다. (OCP의 원칙에 위배 )
-- 디버깅이 어려움이 있다.
-- 테스트 코드의 작성의 어려움이 있다.
+- 싱글턴 인스턴스가 너무 많은 일을 하면 인스턴스의 간의 결합도가 높아진다. (OCP의 원칙에 위배 ) 
 
-[https://whatisthenext.tistory.com/m/36](https://whatisthenext.tistory.com/m/36)
+  *"클래스나 모듈은 확장에는 열려 있어야 하고 변경에는 닫혀 있어야 한다"*
+
+- 디버깅이 어려움이 있다.
+
+- 테스트 코드의 작성의 어려움이 있다.
 
 ------
 
@@ -156,6 +176,8 @@ public class Singleton {
     }
 }
 ```
+
+중첩클래스 Holder는 getInstance 메서드가 호출되기 전에는 참조 되지 않으며, 최초로 getInstance() 메서드가 호출 될 때 **클래스 로더**에 의해 싱글톤 객체를 생성하여 리턴
 
 
 
@@ -400,3 +422,12 @@ public class Main {
 }
 ```
 
+------
+
+# 과제
+
+1. 로그인에 대한 캐시 정보를 싱글 턴으로 구현한다.
+
+2. 블랙 컨슈머 고객인지 일반 고객인지에 대한 객체생성을 하위클래스로 위임하는 
+
+   팩토리메서드 패턴을 구현한다.

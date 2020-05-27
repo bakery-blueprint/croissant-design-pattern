@@ -2,7 +2,9 @@ package com.github.bakerybluprint.croissant.week_02.jw.homework.Customer;
 
 
 
+import com.github.bakerybluprint.croissant.week_02.jw.e_singleton.version_05.Singleton;
 import com.github.bakerybluprint.croissant.week_02.jw.homework.Login.LoginCheck;
+import com.github.bakerybluprint.croissant.week_02.jw.homework.ShopMain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,9 +36,16 @@ public class Customer {
     private boolean blackConsumerFlag;
 
 
-    public Customer(String userId) {
+    private Customer(String userId) {
         this.userId = userId;
     }
+    public static Customer getInstance() {
+        return Customer.LazyHolder.INSTANCE;
+    }
+    private static class LazyHolder {
+        private static final Customer INSTANCE = new Customer(ShopMain.sessionId);
+    }
+
 
     public Customer(String userId, String userName, int gubun, long point, boolean blackConsumerFlag) {
         this.userId = userId;

@@ -14,12 +14,12 @@ public class SuperRobotFactory extends RobotFactory{
         // TODO Auto-generated method stub
         switch (name) {
             case "super":
-
                 return new SuperRobot();
             case "power":
 
                 return new PowerRobot();
         }
+
         return null;
     }
 
