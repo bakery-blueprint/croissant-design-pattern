@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="factorymethodpatternex.HpPotionCreator" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/HpPotionCreator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="346" y="347"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="factorymethodpatternex.ItemCreator" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/ItemCreator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="436" y="190"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="factorymethodpatternex.Main" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="274" y="172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="factorymethodpatternex.MpPotion" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/MpPotion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="592" y="172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="factorymethodpatternex.HpPotion" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/HpPotion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="733" y="172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="factorymethodpatternex.MpPotionCreator" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/MpPotionCreator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="514" y="347"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="factorymethodpatternex.Item" project="DesingPattern" 
+    file="/DesingPattern/src/factorymethodpatternex/Item.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="669" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="8">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="10">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
